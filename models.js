@@ -5,8 +5,7 @@ let models = {};
 main().catch(err => console.log(err))
 async function main() {
     console.log('connecting to mongodb');
-    // await mongoose.connect(`mongodb+srv://jpyke:${process.env.MONGODB_PWD}@cluster0.1guew.mongodb.net/final?retryWrites=true&w=majority`)
-    await mongoose.connect(`mongodb+srv://jpyke:$a3!mongodb@cluster0.1guew.mongodb.net/final?retryWrites=true&w=majority`)
+    await mongoose.connect(process.env.MONGODB_URI);
 
     console.log('connected to mongodb');
 

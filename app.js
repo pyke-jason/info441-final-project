@@ -6,7 +6,7 @@ import logger from 'morgan';
 
 import indexRouter from './routes/index.js';
 import authRouter from './routes/authentication.js';
-import apiRouter from './routes/api/apiv1.js';
+import apiRouter from './routes/api/v1/apiv1.js';
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';

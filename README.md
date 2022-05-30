@@ -1,3 +1,12 @@
+## Installation
+
+Install node modules with `npm i`
+
+Make sure to set the following environment variables:
+
+- `SESSION_SECRET`: anything you want
+- `MONGODB_URI`: `mongodb+srv://jpyke:a3!mongodb@cluster0.1guew.mongodb.net/final?retryWrites=true&w=majority` (or your testing server)
+
 ## Project Description 
 
 For those whose primary language isn’t English, finding books in one’s own culture can be very difficult. In our project, we want to connect indigenous people who speak minoritized languages with public library books in their native tongue. Currently, after searching the American Library Association (ALA), the Society for American Archivists (SAA), and the Association for Tribal Libraries and Museums (ATALM), there are no tools available that can perform such duties as both a finding aid and as a data-driven illustration of library collections for minoritized and language-focused patrons. \
