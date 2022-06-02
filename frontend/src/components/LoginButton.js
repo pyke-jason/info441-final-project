@@ -4,22 +4,23 @@ import escapeHTML from './utils/sanitize';
 
 export default function LoginButton() {
     const [identityInfo, setIdentityInfo] = useState(null);
-    useEffect(() => {
-        const fetchUserIdentity = async () => {
-            await fetch(`api/v1/users/myIdentity`).then(
-                res => {
-                    var json = res.json();
-                    if (json !== null && json.status === "loggedin") {
-                        setIdentityInfo(json);
-                        console.log("identityInfo", identityInfo)
-                    }
-                },
-                (error) => {
-                    console.log(error);
+    const fetchUserIdentity = async () => {
+        console.log('fetching user identit');
+        fetch(`api/v1/users/myIdentity`).then(res => res.json()).then(
+            json => {
+                console.log(json);
+                if (json !== null && json.status === "loggedin") {
+                    setIdentityInfo(json);
+                    console.log("identityInfo", identityInfo)
                 }
-            )
-        }
-        fetchUserIdentity()
+            },
+            (error) => {
+                console.log(error);
+            }
+        )
+    }
+    useEffect(() => {
+        fetchUserIdentity();
     }, []);
     const onClick = () => {
         const fetchUserIdentity = async () => {
@@ -39,7 +40,7 @@ export default function LoginButton() {
         fetchUserIdentity()
     }
     if (identityInfo === null) {
-        return <Navbar bg="green" variant="dark">
+        return <Navbar bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand href="/">UW ISL&NLA</Navbar.Brand>
                 <Nav className="me-auto">
@@ -51,7 +52,7 @@ export default function LoginButton() {
             </Container>
         </Navbar>
     } else {
-        return <Navbar bg="red" variant="dark">
+        return <Navbar bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand href="/">UW ISL&NLA</Navbar.Brand>
                 <Nav className="me-auto">
