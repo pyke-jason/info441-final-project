@@ -5,6 +5,7 @@ var router = express.Router();
 router.get('/myidentity', function (req, res, next) {
     let session = req.session
     if (session.isAuthenticated) {
+        console.log('session', session)
         res.json({
             status: "loggedin",
             userInfo: {

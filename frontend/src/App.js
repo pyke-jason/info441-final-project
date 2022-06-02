@@ -1,16 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import Home from './Home';
 import Login from './Login';
 import UserInfo from './UserInfo';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
 } from "react-router-dom";
-
+//<Route path="signin" element={<Signin/>}></Route>
 function App() {
   return (
     <Router>

@@ -11,7 +11,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .footer {
   display: flex;
   flex: 1;
@@ -42,7 +41,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .title,
@@ -107,6 +106,13 @@
   height: 1em;
   margin-left: 0.5rem;
 }
+
+nav.navbar {
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%
+}
+
 
 @media (max-width: 600px) {
   .grid {
