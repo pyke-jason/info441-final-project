@@ -11,7 +11,6 @@ import apiRouter from './routes/api/v1/apiv1.js';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import models from './models.js'
-import 'dotenv/config'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -26,13 +25,13 @@ app.use(cookieParser());
 // Setup sessions
 const oneDay = 1000 * 60 * 60 * 24;
 app.use(sessions({
-    secret: process.env.CLIENT_SECRET,
+    secret: process.env.SESSION_SECRET,
     saveUninitialized: true,
     cookie: {maxAge: oneDay},
     resave: false
 }))
 
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/', authRouter);
@@ -41,7 +40,5 @@ app.use((req, res, next) => {
     next();
 })
 app.use('/api/v1', apiRouter);
-app.get('*', (req,res) =>{
-    res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'))
-})
+
 export default app;
