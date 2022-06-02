@@ -1,7 +1,13 @@
 export default function UserInfo() {
+    function loadUserInfo() {
+
+    }
+    function saveUserInfo() {
+
+    }
     return <>
-        <nav class="navbar navbar-light bg-light">
-            <div id="errorInfo" class="alert alert-danger fade show" role="alert" style="opacity:0"></div>
+        <nav className="navbar navbar-light bg-light">
+            <div id="errorInfo" className="alert alert-danger fade show" role="alert" style={{ opacity: 0 }}></div>
             <div><a href="/">Return to Homepage</a></div>
             <div id="identity_div">loading...</div>
         </nav>
@@ -22,11 +28,11 @@ export default function UserInfo() {
             <input type="text" id="favWebsiteInput" />
             <br />
             <p id="userPostStatus"></p>
-            <button onclick="saveUserInfo()">Save User Info</button>
+            <button onClick={saveUserInfo()}>Save User Info</button>
         </div>
         <br /><br />
         <h2>All Posts</h2>
-        <button onclick="loadUserInfo()">refresh</button>
+        <button onClick={loadUserInfo()}>refresh</button>
         <div id="posts_box"></div>
     </>
 }
