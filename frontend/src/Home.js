@@ -1,3 +1,5 @@
+import LoginButton from "./components/LoginButton";
+
 export default function Home() {
   return (
     <div className={"container"}>
@@ -17,6 +19,8 @@ export default function Home() {
           Get started by editing{' '}
           <code className={"code"}>pages/index.js</code>
         </p>
+
+        <LoginButton />
 
         <div className={"grid"}>
           <a href="https://nextjs.org/docs" className={"card"}>
