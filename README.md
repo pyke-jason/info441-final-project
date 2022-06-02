@@ -20,7 +20,7 @@ As Developers, we want to build this tool to fill a niche and provide a usable s
 ## Architectural Diagram
 
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](readmeimages/image1.png "image_tooltip")
 
 
 
