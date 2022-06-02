@@ -1,5 +1,6 @@
 import express from 'express';
 import msIdExpress from 'microsoft-identity-express'
+import 'dotenv/config'
 
 const appSettings = {
     appCredentials: {
@@ -8,7 +9,7 @@ const appSettings = {
     	clientSecret:  process.env.CLIENT_SECRET
 	},
 	authRoutes: {
-        redirect: "examplesite.me/redirect", //note: you can explicitly make this "localhost:3000/redirect" or "examplesite.me/redirect"
+        redirect: "localhost:3000/redirect", //note: you can explicitly make this "localhost:3000/redirect" or "examplesite.me/redirect"
     	error: "/error", // the wrapper will redirect to this route in case of any error.
     	unauthorized: "/unauthorized" // the wrapper will redirect to this route in case of unauthorized access attempt.
 	}
