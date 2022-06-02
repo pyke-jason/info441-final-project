@@ -32,7 +32,7 @@ app.use(sessions({
     resave: false
 }))
 
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/', authRouter);
@@ -41,7 +41,31 @@ app.use((req, res, next) => {
     next();
 })
 app.use('/api/v1', apiRouter);
-app.get('*', (req,res) =>{
-    res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'))
-})
+
+// use this by going to urls like: 
+// http://localhost:3000/fakelogin?name=anotheruser
+app.get('/fakelogin', (req, res) => {
+    let newName = req.query.name;
+    let session=req.session;
+    session.isAuthenticated = true;
+    if(!session.account){
+        session.account = {};
+    }
+    session.account.name = newName;
+    session.account.username = newName;
+    console.log("set session");
+    res.redirect("/");
+});
+
+// use this by going to a url like: 
+// http://localhost:3000/fakelogout
+app.get('/fakelogout', (req, res) => {
+    let newName = req.query.name;
+    let session=req.session;
+    session.isAuthenticated = false;
+    session.account = {};
+    console.log("you have fake logged out");
+    res.redirect("/");
+});
+
 export default app;
