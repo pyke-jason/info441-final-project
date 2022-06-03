@@ -17,6 +17,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  // connect to db if not yet connected
   await dbConnect();
 
   let industry: string = req.body.industry;
