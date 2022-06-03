@@ -1,6 +1,6 @@
 ## Installation
 
-Install node modules with `npm i`
+Uses yarn as package manager. Install node modules with `yarn` and run the development build with `yarn dev`
 
 Make sure to set the following environment variables:
 
