@@ -4,114 +4,45 @@ Install node modules with `npm i`
 
 Make sure to set the following environment variables:
 
-- `SESSION_SECRET`: anything you want
-- `MONGODB_URI`: `mongodb+srv://jpyke:a3!mongodb@cluster0.1guew.mongodb.net/final?retryWrites=true&w=majority` (or your testing server)
+- `MONGODB_URI`: uri of your mongodb database
 
-## Project Description 
+## View Deployment
 
-For those whose primary language isn’t English, finding books in one’s own culture can be very difficult. In our project, we want to connect indigenous people who speak minoritized languages with public library books in their native tongue. Currently, after searching the American Library Association (ALA), the Society for American Archivists (SAA), and the Association for Tribal Libraries and Museums (ATALM), there are no tools available that can perform such duties as both a finding aid and as a data-driven illustration of library collections for minoritized and language-focused patrons. \
- \
-As Developers, we want to build this tool to fill a niche and provide a usable social good to Public Library users and Library Administrators across the spectrum of cultures and languages. We envision an application built in collaboration with regional public libraries to encode less common languages or translated books in a way easily discoverable by native speakers. Our target audience is indigenous people seeking to discover more books in their native language. However, we also consider public library systems as another stakeholder in our application, because they will facilitate insertion of book and language data into our application. Those who wish to discover new books in their native language will want to use our application to greatly expedite the research process, as the relevant data is packaged in an intuitive and accessible manner. Conversely, libraries are incentivized to use our application as a means of attracting a wider range of readers.When implemented fully, our application will allow readers and libraries to connect with each other through a novel method.
+Link: https://info441-final-project.vercel.app/
 
+## Project Description
 
-## Technical Description
+This project is aimed to help job applicants tailor their resumes to a job appplication by uncovering and understanding important aspects of the job listing.
 
+## Problem Space
 
-## Architectural Diagram
-
-
-![alt_text](readmeimages/image1.png "image_tooltip")
+The current job market has 11 million job openings and ResumeQuest is here to help college kids land their first job. We created this site because we found that a lot of college students have limited experience making resumes and if they do have a resume they do not always know what to put on it to make them stand out. At the moment, our website only has data for two industries however we will be making our product open source to add any and all fields to our platform.
 
 
+## Research Insights
 
-## User Stories Summary
-
-
-<table>
-  <tr>
-   <td>Priority 
-   </td>
-   <td>User
-   </td>
-   <td>Description
-   </td>
-   <td>Technical Implementation
-   </td>
-  </tr>
-  <tr>
-   <td>P0
-   </td>
-   <td>As a member of the public
-   </td>
-   <td>I want to search for books in public libraries using my native language
-   </td>
-   <td>When pulling books out of the database, add a <strong>filter to the query</strong> (as opposed to having the server filter the database results, or the client filters what the server sent). 
-   </td>
-  </tr>
-  <tr>
-   <td>P1
-   </td>
-   <td>As a librarian
-   </td>
-   <td>I want to enter books with specific language to the website to make it available to the public
-   </td>
-   <td>Add a <strong>post</strong> function to the front end so that the user could store data into our database. 
-   </td>
-  </tr>
-  <tr>
-   <td>P2
-   </td>
-   <td>As a librarian
-   </td>
-   <td>I want replace old version books with newer version data
-   </td>
-   <td>When storing book data into the database, also include a function to <strong>link</strong> different versions of the same book under the same <strong>primary key</strong>.
-   </td>
-  </tr>
-  <tr>
-   <td>p3
-   </td>
-   <td>As a member of the public
-   </td>
-   <td>I want to have my own account on the website to receive personal book recommendations
-   </td>
-   <td>Use the <strong>auth tokens</strong> to allow users to create accounts in the database using their email. Storing user languages, and reading history to tune the feed in the personal page. 
-   </td>
-  </tr>
-</table>
+- College students have a difficult time making and choosing what to include in their resumes.
+- 11 million job openings but decreasing number of applications
+- 63% of recruiters want to receive resumes tailored to the open position but college usually do not tailor their resumes properly.
 
 
- 
+## Current Stakeholders:
+
+- Graduating college students studying UX design
+- Graduating college students studying computer science
+- Job Recruiters
+- Graduating students in any industry
 
 
-## Available Endpoints
+## Actions:
 
-GET /books/query?{terms}
-
-
-
-* Perform a book search using language, title and region search terms
-
-GET /books/{id}, POST /books/{id}
+- Research: Job market, Resumes, Professionals, Industry Skills
+- Interviews: Professionals from UX and Software Engineering and graduating college students
+- Design sprints for the perfect UI
+- User Testing: Product testing and functionality testing
+- Web devlopment and creation of database that connects users with skills
 
 
+## Our Solution
 
-* Get or add book name, translation name, original language, date created, etc. Does not require authentication to access these endpoints
-
-GET /library/signin, GET /library/signout
-
-
-
-* These endpoints handle library institution authentication. A library entity can authenticate and go through a verification process. We will use Microsoft Identity Express
-
-GET /error 
-
-
-
-* Returned when a server error occurs
-
-GET /library/unauthorized
-
-
-
-* Used for redirects when a user does not have permission to make changes a library would make
+With our product, students will be able to make a standout resume that will help them land a job with their dream companies. ResumeQuest also makes the tedious process of updating or making your resume a more fun and efficient process.

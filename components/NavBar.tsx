@@ -8,8 +8,6 @@ import {
 } from "@components/common";
 import { useRouter } from 'next/router'
 
-// import { DarkThemeButton } from "./DarkThemeButton";
-
 export default function NavBar({ }) {
   const router = useRouter()
   return (
