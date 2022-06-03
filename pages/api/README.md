@@ -1,6 +1,6 @@
 # API Route Docs
 
-## POST /keywords - Keyword Extraction
+## POST /parser - Keyword Extraction
 
 ### Request Format
 
