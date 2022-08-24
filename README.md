@@ -1,3 +1,7 @@
+# Resume Quest
+
+Final project website for INFO 441 at UW, built with Next.js and MongoDB.
+
 ## Installation
 
 Uses yarn as package manager. Install node modules with `yarn` and run the development build with `yarn dev`
